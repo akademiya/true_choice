@@ -147,7 +147,9 @@ class MainActivity : AppCompatActivity() {
                 coinMap["love"] = resources.getDrawable(R.drawable.lubit)
                 coinMap["hates"] = resources.getDrawable(R.drawable.nelubit)
             }
-            R.id.luck -> { Toast.makeText(this, "click удача - неудача", Toast.LENGTH_SHORT).show() }
+            R.id.luck -> {
+                Toast.makeText(this, "click удача - неудача", Toast.LENGTH_SHORT).show()
+            }
             R.id.vernyak -> {
                 coinType = CoinType.VERNYAK
                 im_coin.setImageDrawable(resources.getDrawable(R.drawable.vernyak_oblom))
