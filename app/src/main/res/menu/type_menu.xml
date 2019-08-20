@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:title="@string/menu_orel"
+            android:id="@+id/orel"/>
+    <item
+            android:title="@string/menu_yes"
+            android:id="@+id/yes"/>
+    <item
+            android:title="@string/menu_love"
+            android:id="@+id/love"/>
+    <item
+            android:title="@string/menu_luck"
+            android:id="@+id/luck"/>
+    <item
+            android:title="@string/menu_vernyak"
+            android:id="@+id/vernyak"/>
+</menu>

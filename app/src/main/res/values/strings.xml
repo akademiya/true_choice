@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TrueAndFalse</string>
+    <string name="title">Монета для принятия решений</string>
+
+    <string name="tv_title">Орел или Решка</string>
+    <string name="touch_coin">Коснитесь монеты</string>
+    <string name="play_3time">3 подброса</string>
+    <string name="play_1player">Один игрок</string>
+    <string name="play_2player">Два игрока</string>
+    <string name="choice">Сделайте выбор:</string>
+    <string name="dialog_settings_title">Настройте способ подбрасывания:</string>
+
+    <string name="menu_orel">орел - решка</string>
+    <string name="menu_yes">да - нет</string>
+    <string name="menu_love">любит - не любит</string>
+    <string name="menu_luck">повезет - неповезет</string>
+    <string name="menu_vernyak">верняк - облом</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+        <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:text="@string/title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textColor="@color/dark"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"/>
+
+            <ImageView
+                    android:id="@+id/iv_volume"
+                    android:padding="12dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_volume_off"/>
+
+            <ImageView
+                    android:id="@+id/iv_settings"
+                    android:padding="12dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_settings"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+            android:id="@+id/tv_title"
+            android:text="@string/tv_title"
+            android:textSize="40sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/toolbar"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+            android:id="@+id/im_coin"
+            android:src="@drawable/orel_reshka"
+            android:layout_width="200dp"
+            android:layout_centerInParent="true"
+            android:layout_height="200dp"/>
+
+    <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/choice"-->
+            <!--android:layout_below="@+id/im_coin"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginTop="48dp"/>-->
+
+    <!--<Button-->
+            <!--android:id="@+id/btn_start_new"-->
+            <!--android:text="new start"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+</RelativeLayout>
