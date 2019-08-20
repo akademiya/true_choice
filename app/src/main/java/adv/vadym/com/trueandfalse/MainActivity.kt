@@ -5,7 +5,6 @@ import android.content.SharedPreferences
 import android.graphics.drawable.Drawable
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.preference.Preference
 import android.preference.PreferenceManager
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
