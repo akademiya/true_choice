@@ -19,14 +19,14 @@
                 android:checked="true"
                 android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
-                android:text="Рандомное падение монеты"
+                android:text="Рандомное выпадение монеты"
                 android:layout_height="wrap_content"/>
 
         <RadioButton
                 android:textSize="14sp"
                 android:id="@+id/rb_handle"
                 android:layout_width="match_parent"
-                android:text="Остановить монету самому"
+                android:text="Словить монету самому"
                 android:layout_height="wrap_content"/>
     </RadioGroup>
 </LinearLayout>

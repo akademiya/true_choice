@@ -8,11 +8,11 @@
     <string name="play_1player">Один игрок</string>
     <string name="play_2player">Два игрока</string>
     <string name="choice">Сделайте выбор:</string>
-    <string name="dialog_settings_title">Настройте способ подбрасывания:</string>
+    <string name="dialog_settings_title">Настройте способ выпадения монеты:</string>
 
     <string name="menu_orel">орел - решка</string>
     <string name="menu_yes">да - нет</string>
     <string name="menu_love">любит - не любит</string>
-    <string name="menu_luck">повезет - неповезет</string>
+    <string name="menu_luck">сбудется - не сбудется</string>
     <string name="menu_vernyak">верняк - облом</string>
 </resources>

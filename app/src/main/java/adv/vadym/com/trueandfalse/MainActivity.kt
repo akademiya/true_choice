@@ -36,10 +36,8 @@ class MainActivity : AppCompatActivity() {
             isVolume = !isVolume
             if (isVolume) {
                 iv_volume.setImageDrawable(resources.getDrawable(R.drawable.ic_volume_up))
-                Toast.makeText(this, "звук включен", Toast.LENGTH_SHORT).show()
             } else {
                 iv_volume.setImageDrawable(resources.getDrawable(R.drawable.ic_volume_off))
-                Toast.makeText(this, "звук выключен", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -75,26 +73,26 @@ class MainActivity : AppCompatActivity() {
                 mp.start()
             }
 
-            isYes = Math.random() < 0.5
+            isYes = Math.random() < 0.5 /** Положительная или отрицательная сторона монеты */
             animation(it)
 
             if (isYes) {
-                im_coin.setImageDrawable(resources.getDrawable(R.drawable.orel))
+//                im_coin.setImageDrawable(resources.getDrawable(R.drawable.orel))
                 when (coinType) {
-                    CoinType.YES -> im_coin.setImageDrawable(coinMap["yes"])
-                    CoinType.OREL -> im_coin.setImageDrawable(coinMap["orel"])
-                    CoinType.LOVE -> im_coin.setImageDrawable(coinMap["love"])
-                    CoinType.VERNYAK -> im_coin.setImageDrawable(coinMap["vernyak"])
-                    else -> im_coin.setImageDrawable(coinMap["orel"])
+                    CoinType.YES -> image(im_coin, coinMap["yes"])
+                    CoinType.OREL -> image(im_coin, coinMap["orel"])
+                    CoinType.LOVE -> image(im_coin, coinMap["love"])
+                    CoinType.LUCK -> image(im_coin, coinMap["be"])
+                    CoinType.VERNYAK -> image(im_coin, coinMap["vernyak"])
                 }
             } else {
-                im_coin.setImageDrawable(resources.getDrawable(R.drawable.reshka))
+//                im_coin.setImageDrawable(resources.getDrawable(R.drawable.reshka))
                 when (coinType) {
-                    CoinType.YES -> im_coin.setImageDrawable(coinMap["no"])
-                    CoinType.OREL -> im_coin.setImageDrawable(coinMap["reshka"])
-                    CoinType.LOVE -> im_coin.setImageDrawable(coinMap["hates"])
-                    CoinType.VERNYAK -> im_coin.setImageDrawable(coinMap["oblom"])
-                    else -> im_coin.setImageDrawable(coinMap["reshka"])
+                    CoinType.YES -> image(im_coin, coinMap["no"])
+                    CoinType.OREL -> image(im_coin, coinMap["reshka"])
+                    CoinType.LOVE -> image(im_coin, coinMap["hates"])
+                    CoinType.LUCK -> image(im_coin, coinMap["notbe"])
+                    CoinType.VERNYAK -> image(im_coin, coinMap["oblom"])
                 }
             }
 
@@ -136,6 +134,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.yes -> {
                 coinType = CoinType.YES
+                im_coin.setImageDrawable(resources.getDrawable(R.drawable.yes_no))
                 coinMap["yes"] = resources.getDrawable(R.drawable.yes)
                 coinMap["no"] = resources.getDrawable(R.drawable.no)
             }
@@ -146,7 +145,10 @@ class MainActivity : AppCompatActivity() {
                 coinMap["hates"] = resources.getDrawable(R.drawable.nelubit)
             }
             R.id.luck -> {
-                Toast.makeText(this, "click удача - неудача", Toast.LENGTH_SHORT).show()
+                coinType = CoinType.LUCK
+                im_coin.setImageDrawable(resources.getDrawable(R.drawable.sbudetsa_nesbudetsa))
+                coinMap["be"] = resources.getDrawable(R.drawable.sbudetsa)
+                coinMap["notbe"] = resources.getDrawable(R.drawable.nesbudetsa)
             }
             R.id.vernyak -> {
                 coinType = CoinType.VERNYAK
