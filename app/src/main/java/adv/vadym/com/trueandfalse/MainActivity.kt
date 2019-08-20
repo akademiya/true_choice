@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         preference = PreferenceManager.getDefaultSharedPreferences(this)
 
-
         iv_volume.setOnClickListener {
             isVolume = !isVolume
             if (isVolume) {
