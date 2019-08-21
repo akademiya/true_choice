@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private var isYes = false
     private var isVolume = false
     private var isRandomSelect = true
-    private var coinType = CoinType.OREL
+    private var coinType = CoinType.NONE
     private var coinMap = HashMap<String, Drawable>()
     private lateinit var preference: SharedPreferences
 
@@ -77,8 +77,8 @@ class MainActivity : AppCompatActivity() {
             animation(it)
 
             if (isYes) {
-//                im_coin.setImageDrawable(resources.getDrawable(R.drawable.orel))
                 when (coinType) {
+                    CoinType.NONE -> image(im_coin, resources.getDrawable(R.drawable.orel))
                     CoinType.YES -> image(im_coin, coinMap["yes"])
                     CoinType.OREL -> image(im_coin, coinMap["orel"])
                     CoinType.LOVE -> image(im_coin, coinMap["love"])
@@ -86,8 +86,8 @@ class MainActivity : AppCompatActivity() {
                     CoinType.VERNYAK -> image(im_coin, coinMap["vernyak"])
                 }
             } else {
-//                im_coin.setImageDrawable(resources.getDrawable(R.drawable.reshka))
                 when (coinType) {
+                    CoinType.NONE -> image(im_coin, resources.getDrawable(R.drawable.reshka))
                     CoinType.YES -> image(im_coin, coinMap["no"])
                     CoinType.OREL -> image(im_coin, coinMap["reshka"])
                     CoinType.LOVE -> image(im_coin, coinMap["hates"])
@@ -161,6 +161,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     enum class CoinType {
-        OREL, YES, LOVE, LUCK, VERNYAK
+        NONE, OREL, YES, LOVE, LUCK, VERNYAK
     }
 }
